@@ -1,5 +1,6 @@
 # inter2Planes_2.stat
 # in 3D, the intersection of two planes is a flat
+# if two different points are in the intersection, the whole line defined by them is included in it
 context
       dimension 3
       layers 1
