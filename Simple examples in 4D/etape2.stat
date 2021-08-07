@@ -1,0 +1,38 @@
+# etape2.stat
+# in 4D
+# two independent planes ABC et A'B'C' cut each other in P
+# H is a hyperplane (dimension 3) not containing P
+# then ABC inter H et A'B'C' inter H are two non coplanar lines
+context
+    dimension 4
+    layers 1
+endofcontext
+layer 1
+    points A B C H1 H2 H3 H4 M N P
+           A' B' C' M' N'
+    hypotheses
+        A B C : 3           # A B C define a plane
+        H1 H2 H3 H4 : 4     # H is a hyperplane defined by the Hi
+        A H1 H2 H3 H4 : 5   # A does not belong to H
+        M N : 2             # M and N are different
+        M A B C : 3
+        N A B C : 3
+        P A B C : 3
+        P H1 H2 H3 H4 : 5
+        M H1 H2 H3 H4 : 4
+        N H1 H2 H3 H4 : 4
+        A' B' C' : 3            # A' B' C' define a plane
+        A' H1 H2 H3 H4 : 5      # A' does not belong to H
+        A B C A' B' C' : 5      # the two planes are independent
+        M' N' : 2               # M' and N' are different
+        M' A' B' C' : 3
+        N' A' B' C' : 3
+        P A' B' C' : 3
+        M' H1 H2 H3 H4 : 4
+        N' H1 H2 H3 H4 : 4
+    conclusion
+    None
+endoflayer
+conclusion
+    M N M' N' : 4
+end

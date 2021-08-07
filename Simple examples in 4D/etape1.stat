@@ -1,0 +1,27 @@
+# etape1.stat
+# en dimension 4
+# si un plan P et un hyperplan H se coupent en 2 points distincts
+# alors c'est au plus suivant une droite
+context
+    dimension 4
+    layers 1
+endofcontext
+layer 1
+    points A B C H1 H2 H3 H4 M N P
+    hypotheses
+        A B C : 3           # A B C define a plane
+        H1 H2 H3 H4 : 4
+        A H1 H2 H3 H4 : 5   # A does not belong to H
+        M N : 2             # M and N are different
+        M A B C : 3
+        P A B C : 3
+        N A B C : 3
+        M H1 H2 H3 H4 : 4
+        N H1 H2 H3 H4 : 4
+        P H1 H2 H3 H4 : 4
+    conclusion
+    None
+endoflayer
+conclusion
+    M N P : 2
+end

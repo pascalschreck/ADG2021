@@ -1,0 +1,23 @@
+# etape0.stat
+# in 4D the intersection of 2 independent planes is a point
+context
+    dimension 4
+    layers 1
+endofcontext
+layer 0
+    points 
+        A B C A' B' C' M N
+    hypotheses
+        A B C : 3           # first plane defined by A B and C
+        A' B' C' : 3        # second plane
+        A B C A' B' C' : 5  # the two planes are independent
+        M A B C : 3         # M and N are in both planes
+        N A B C : 3
+        M A' B' C' : 3
+        N A' B' C' : 3
+    conclusion
+        None
+endoflayer
+conclusion
+    M N : 1                 # M and N are equal
+end

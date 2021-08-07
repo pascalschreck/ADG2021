@@ -5,7 +5,7 @@ This repository contains the code source for the examples stated in our ADG 2021
 ## Intersection of two planes in 3D
 This is our first example in the paper. As explained, Bip is unable to add new points in a proof. Prolog programmers would say that it works with the closed word hypothesis.
 
-This is why we only give the proof that *if the intersection of two different planes contains at least two points*, this intersection is a line. The existence of that points is proved by hand in the paper using existential axioms.
+This is why we only give the proof that *if the intersection of two different planes contains at least two points*, this intersection is a line. The existence of that points is proved by hand in the paper. To do this existential axiomes are applied (by hand).
 ## Dandelin-Gallucci's theorem
 We already published a paper about this theorem, this is why it is not explained with great details in our paper.
 ## Desargues's theorems
@@ -24,4 +24,4 @@ We also explore the definition of a 3-complete hypertrahedron (from the colinear
 ## Intersection of two hypeplanes in 5D
 Again, the existence of crucial points is omitted.
 ## More examples
-maybe
+See the repository (and contact me if you want more information)
